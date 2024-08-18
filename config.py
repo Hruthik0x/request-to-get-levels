@@ -1,7 +1,6 @@
-MAX_LEVEL = 1
-MIN_LEVEL = 0
 SECRET_LENGTH = 128
 
+LEVEL_IDS = ['0','1']
 # all the team names alogn with their maild ids
 teams_data = [
                 {
@@ -38,10 +37,10 @@ def gen_team_ids(teams_data) :
 def valid_level(level):
     try : 
         level = int(level)
-        return level >= MIN_LEVEL and level <= MAX_LEVEL
+        return level in get_level_ids()
     except :
         return False
 
 # Could be customly defined, do not change the fucntion prototype ..
 def get_level_ids():
-    return list(range(MIN_LEVEL, MAX_LEVEL+1))
+    return LEVEL_IDS

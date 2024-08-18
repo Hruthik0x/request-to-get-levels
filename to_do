@@ -1,0 +1,8 @@
+Gotta check if db is in correct format check_levels_db and check_creds_db, check_questions
+Gotta work with send_mails 
+Gotta work with laoding mails from xlsx file 
+Gotta perform some more testing 
+Should create seperate dbs for points and question
+Gotta add this feature of save db as json before resetting db.
+gotta encrypt the db.
+gotta make db connect with a special password.

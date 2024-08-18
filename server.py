@@ -10,8 +10,7 @@ app = Flask(__name__)
 def return_instructions():
     return get_instructions()
 
-# requires id, secret
-# Calls get_hint from levels.py ---> Calls get_hint from db.py
+# requires id, secret, level
 @app.route('/hint', methods=['POST'])
 def return_hint():
     data = request.form
@@ -20,15 +19,13 @@ def return_hint():
     secret = data['secret']
     return get_hint(team_id, secret, level)
 
-# requires id
-# Calls get_question from levels.py ---> Calls get_question from db.py
+# requires level
 @app.route('/questions', methods=['POST'])
 def return_question():
     team_id = request.form['team_id']
     return get_questions(team_id)
 
-# requires id, secret
-# Calls vaildate_submission from levels.py ---> Calls validate_answer from db.py
+# requires id, secret, level, answer
 @app.route('/submit', methods=['POST'])
 def submit_answer():
     data = request.form
@@ -52,9 +49,11 @@ def init() :
     # User choose to reset the db or quit.
     init_db()
 
-    # Generates questions, sets all levels, points to 0
+    # Generates creds, new secrets 
     # reset_creds_db()
-    reset_levels_db()
+
+    # Generates questions, sets all levels, points to 0
+    # reset_levels_db()
 
 if __name__ == '__main__':
     init()
