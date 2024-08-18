@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "dd2f6d08-65bd-4f90-aacf-0f0d29b823c9",
+		"name": "Request_2_get_level",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33330307"
+	},
+	"item": [
+		{
+			"name": "Instructions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/instructions",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"instructions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Questions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "team_id",
+							"value": "team_0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/questions",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "team_id",
+							"value": "team_0",
+							"type": "text"
+						},
+						{
+							"key": "level",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "secret",
+							"value": "Q4ToEIO0kJzdfXBttkbHHDgNftp3XWbaKMg0VroS2wCpwSMl9AsWKU4ty4VWxoD59Q35q69BXsgXPHpFL4JQHQksjfY1owjAKhdiXNFlHl8VB6jG4T5YVp1F82RBQh3k",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/hint?=",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hint"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "team_id",
+							"value": "team_0",
+							"type": "text"
+						},
+						{
+							"key": "secret",
+							"value": "fVDhADoCU3pXTN2oGyP6MS6nzOTCG6YfG2xc804TaP2yzZzUBTo44Jm4kVk6tX3HmkUtUGJM4Q4VaAh9gZItPM6J2X3dyRZ3lZqbs4CjJMZkrYUCQWU4yllxjkVXH7UI",
+							"type": "text"
+						},
+						{
+							"key": "answer",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "level",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/submit",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/scores",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"scores"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
